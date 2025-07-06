@@ -1,0 +1,5 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-f', 'Dockerfile.prod', '-t', 'us-central1-docker.pkg.dev/project-asistente-openai-eapr/repo-chat-streamlit-datapath1/image-v4-streamlit-datapath:latest', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/project-asistente-openai-eapr/repo-chat-streamlit-datapath1/image-v4-streamlit-datapath:latest']

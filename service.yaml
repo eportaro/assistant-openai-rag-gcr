@@ -1,0 +1,12 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: servicio-asistente-openai-eduardo-portaro
+spec:
+  template:
+    spec:
+      containers:
+        - image: us-central1-docker.pkg.dev/project-asistente-openai-eapr/repo-chat-streamlit-datapath1/image-v4-streamlit-datapath:latest
+          env:
+          ports:
+            - containerPort: 4000
